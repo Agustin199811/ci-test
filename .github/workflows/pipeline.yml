@@ -104,7 +104,9 @@ jobs:
           fetch-depth: 0
       - name: Deploy with Railway
         if: ${{ github.event_name == 'push' }}
-        uses: devtomio/action-railway@v1.1.4
+        uses: bervProject/railway-deploy@main
         with:
           railway_token: 2d2f7e14-481e-4fb5-990f-46376ae087f3
+          service: "ci-test"
+          detach: true
 
